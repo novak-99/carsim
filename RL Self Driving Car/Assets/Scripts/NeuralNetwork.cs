@@ -202,8 +202,8 @@ public class NeuralNetwork
 
     public void train(List<List<float>> states, List<float> actions, List<float> rewards){
         int T = states.Count; 
-        float lr = 0.001f; // * Mathf.Pow(0.99f, T); 
-        Debug.Log(lr); 
+        float lr = 0.001f * Mathf.Pow(0.999f, T); 
+        Debug.Log("LR: " + lr); 
         List<float> R = weightedReward(rewards); 
         for(int t = 0; t < T; t++){
             //evaluateP(states[t], actions[t]); // this initializes all variables. 

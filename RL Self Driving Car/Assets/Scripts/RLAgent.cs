@@ -144,8 +144,8 @@ public class RLAgent : MonoBehaviour
                 // Run a train function 
                 deepRLNet.train(states, actions, rewards); 
 
-                Debug.Log("End of epoch " + epochs);
-                Debug.Log("Car drove " + transform.position.z + "ft");
+                Debug.Log("End of episode " + epochs);
+                Debug.Log("Car drove " + transform.position.z + "m");
                 deepRLNet.saveWeights(); 
             }
 
