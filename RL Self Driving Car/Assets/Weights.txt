@@ -1,0 +1,15 @@
+Layer 2 Parameters
+Mu Weights
+0.2770195 
+Mu Bias
+0.007319141
+Sigma Weights
+0.9908259 
+Sigma Bias
+0.0003351335
+Layer 1 Parameters
+Hidden Weights
+0.6744002 
+0.1855557 
+Hidden Bias
+-5.526234E-05 
