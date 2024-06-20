@@ -1,1 +1,1 @@
-# Deep Reinforcement Learning for Lane Detection
+# Deep Reinforcement Learning for Lane Navigation
