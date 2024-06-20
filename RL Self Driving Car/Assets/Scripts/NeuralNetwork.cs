@@ -11,7 +11,7 @@ public class NeuralNetwork
     LinAlg linalg = new LinAlg();
     Random random = new Random();
     private static int k = 2;  
-    private static int hidden = 1;
+    private static int hidden = 3;
     private static float gamma = 0.99f; 
 
     List<float> mu = new List<float>();
@@ -29,8 +29,6 @@ public class NeuralNetwork
     List<List<float>> weightsHidden = new List<List<float>>(k);
 
     List<float> biasHidden = new List<float>(new float[hidden]); // Initialize to 0... 
-
-    int epochs = 0; // Note to self: make this a "getter/setter" variable. 
 
 
     // redo with correct uniform [0,1] initialization ... for mu, sigma, hidden.
@@ -204,7 +202,7 @@ public class NeuralNetwork
 
     public void train(List<List<float>> states, List<float> actions, List<float> rewards){
         int T = states.Count; 
-        float lr = 0.001f * Mathf.Pow(0.99f, T); 
+        float lr = 0.001f; // * Mathf.Pow(0.99f, T); 
         Debug.Log(lr); 
         List<float> R = weightedReward(rewards); 
         for(int t = 0; t < T; t++){
@@ -268,7 +266,6 @@ public class NeuralNetwork
 
         a = new List<List<float>>(); 
         z = new List<List<float>>(); 
-        epochs++; 
     }
 
     public void saveWeights(){

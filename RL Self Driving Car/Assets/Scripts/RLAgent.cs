@@ -139,6 +139,8 @@ public class RLAgent : MonoBehaviour
                     rewards[i] =  transform.position.z - rewards[i]; 
                 }
 
+                 // rewards[rewards.Count - 1] = negativeInf; 
+
                 // Run a train function 
                 deepRLNet.train(states, actions, rewards); 
 
